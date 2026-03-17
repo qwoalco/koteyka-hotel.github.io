@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котейка — Блог и новости</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="access/css/blog.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="blog-container">
+        <h1 class="page-title">Блог</h1>
+        <p class="page-subtitle">Полезные статьи о кошках и новости отеля</p>
+
+        <div class="blog-grid">
+            <!-- Статья 1: Подготовка к поездке -->
+            <article class="blog-card">
+                <div class="blog-date">11/03/2026</div>
+                <h2 class="blog-title">Как подготовить кошку к поездке в гостиницу</h2>
+                <p class="blog-excerpt">Рассказываем, как снизить стресс у питомца и что взять с собой в первую поездку. Список необходимых вещей и советы по адаптации.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 2: Питание -->
+            <article class="blog-card">
+                <div class="blog-date">10/03/2026</div>
+                <h2 class="blog-title">Чем кормить кошку: сухой или влажный корм?</h2>
+                <p class="blog-excerpt">Разбираем плюсы и минусы разных типов питания. Советы ветеринаров по составлению рациона для здорового питомца.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 3: Игры -->
+            <article class="blog-card">
+                <div class="blog-date">09/03/2026</div>
+                <h2 class="blog-title">Топ-5 игрушек для активных кошек</h2>
+                <p class="blog-excerpt">Какие игрушки действительно нравятся кошкам, а какие пылятся в углу. Обзор самых популярных развлечений.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 4: Здоровье -->
+            <article class="blog-card">
+                <div class="blog-date">08/03/2026</div>
+                <h2 class="blog-title">Как понять, что кошка заболела</h2>
+                <p class="blog-excerpt">Первые признаки недомогания у кошек. На что обратить внимание и когда срочно к ветеринару.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 5: Новости отеля -->
+            <article class="blog-card">
+                <div class="blog-date">07/03/2026</div>
+                <h2 class="blog-title">В нашем отеле новые номера "Люкс"</h2>
+                <p class="blog-excerpt">Теперь ваши питомцы могут отдыхать с ещё большим комфортом. Площадь номеров увеличена, добавлены новые игрушки.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 6: Воспитание -->
+            <article class="blog-card">
+                <div class="blog-date">06/03/2026</div>
+                <h2 class="blog-title">Как отучить кошку драть мебель</h2>
+                <p class="blog-excerpt">Эффективные способы приучить кошку к когтеточке и сохранить вашу мебель в целости.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 7: Путешествия -->
+            <article class="blog-card">
+                <div class="blog-date">05/03/2026</div>
+                <h2 class="blog-title">Как выбрать переноску для кошки</h2>
+                <p class="blog-excerpt">На что обратить внимание при выборе переноски: размер, материал, вентиляция. Советы для автопутешествий.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+
+            <!-- Статья 8: Акция -->
+            <article class="blog-card">
+                <div class="blog-date">04/03/2026</div>
+                <h2 class="blog-title">Скидка 20% на первый заезд в марте</h2>
+                <p class="blog-excerpt">Только в марте специальное предложение для новых клиентов. Привезите питомца и получите скидку.</p>
+                <button class="btn-read-more">Читать далее</button>
+            </article>
+        </div>
+
+        <!-- Кнопка "Показать ещё" -->
+        <div class="blog-more">
+            <button class="btn-load-more">Показать ещё</button>
+        </div>
+
+        <!-- Секция "Будь в курсе" - w1201px h450px -->
+        <section class="subscribe-section">
+            <div class="subscribe-content">
+                <h2>Будь в курсе</h2>
+                <p>Подпишитесь на нашу рассылку и получайте полезные статьи о кошках, новости отеля и специальные предложения</p>
+                
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <button type="submit" class="btn-subscribe">Подписаться</button>
+                </form>
+                
+                <p class="subscribe-note">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальное окно для статьи -->
+    <div id="article-modal" class="modal">
+        <div class="modal-content article-content">
+            <span class="close-modal">&times;</span>
+            <div class="article-full">
+                <h2 id="modal-title">Как подготовить кошку к поездке в гостиницу</h2>
+                <div class="article-meta" id="modal-date">11 марта 2026 · 5 мин чтения</div>
+                <div class="article-image">
+                    <img src="access/image/cat-blog.jpg" alt="Кошка" id="modal-image">
+                </div>
+                <div class="article-body" id="modal-body">
+                    <!-- Контент будет подставляться через JS -->
+                </div>
+                <button class="btn-orange close-article">Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Спасибо за подписку" -->
+    <div id="subscribe-modal" class="modal">
+        <div class="modal-content thanks-content">
+            <span class="close-modal">&times;</span>
+            <div class="thanks-icon">✓</div>
+            <h2>Спасибо за подписку!</h2>
+            <p>Теперь вы будете получать наши новости и полезные статьи</p>
+            <button class="btn-orange modal-btn close-thanks">Отлично</button>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Подгрузка header и footer
+        function loadHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(err => console.error('Ошибка загрузки:', err));
+        }
+
+        loadHTML('header-placeholder', 'header.html');
+        loadHTML('footer-placeholder', 'footer.html');
+
+        // Данные для статей
+        const articles = [
+            {
+                title: "Как подготовить кошку к поездке в гостиницу",
+                date: "11 марта 2026",
+                image: "access/image/cat-blog-1.jpg",
+                content: `
+                    <p>Поездка в гостиницу — стресс для кошки. Но если подготовиться правильно, всё пройдёт гладко.</p>
+                    <h3>1. Приучите к переноске заранее</h3>
+                    <p>За неделю до поездки поставьте переноску открытой, положите внутрь любимую игрушку и лакомства. Пусть кошка исследует её сама.</p>
+                    <h3>2. Соберите знакомые вещи</h3>
+                    <p>Возьмите с собой лежанку, миску, игрушки с запахом дома. Это снизит тревожность.</p>
+                    <h3>3. Не кормите перед дорогой</h3>
+                    <p>Последний приём пищи — за 3-4 часа до выезда, чтобы избежать укачивания.</p>
+                    <h3>4. Используйте феромоны</h3>
+                    <p>Спрей с синтетическими феромонами (Feliway) за 15 минут до поездки успокоит питомца.</p>
+                    <h3>5. Что взять с собой</h3>
+                    <ul>
+                        <li>Ветпаспорт с прививками</li>
+                        <li>Запас корма на всё время</li>
+                        <li>Любимую игрушку</li>
+                        <li>Одноразовые пелёнки</li>
+                        <li>Ветеринарная аптечка</li>
+                    </ul>
+                `
+            },
+            {
+                title: "Чем кормить кошку: сухой или влажный корм?",
+                date: "10 марта 2026",
+                image: "access/image/cat-blog-2.jpg",
+                content: `
+                    <p>Выбор между сухим и влажным кормом — вечный спор кошатников. Давайте разберёмся.</p>
+                    <h3>Сухой корм: плюсы</h3>
+                    <ul>
+                        <li>Удобство хранения и использования</li>
+                        <li>Помогает очищать зубы от налёта</li>
+                        <li>Экономичнее влажного</li>
+                    </ul>
+                    <h3>Влажный корм: плюсы</h3>
+                    <ul>
+                        <li>Больше влаги — профилактика МКБ</li>
+                        <li>Выше вкусовая привлекательность</li>
+                        <li>Легче жевать для пожилых кошек</li>
+                    </ul>
+                    <h3>Идеальное решение</h3>
+                    <p>Ветеринары рекомендуют комбинировать оба типа: сухой корм как основа + влажный как дополнение 1-2 раза в день.</p>
+                `
+            },
+            {
+                title: "Топ-5 игрушек для активных кошек",
+                date: "09 марта 2026",
+                image: "access/image/cat-blog-3.jpg",
+                content: `
+                    <p>Чтобы кошка была здорова и счастлива, ей нужно играть каждый день. Вот лучшие игрушки.</p>
+                    <h3>1. Удочка-дразнилка</h3>
+                    <p>Имитирует движения птички или насекомого — пробуждает охотничий инстинкт.</p>
+                    <h3>2. Интерактивный лабиринт с шариками</h3>
+                    <p>Кошка пытается достать шарик лапой — отличная тренировка.</p>
+                    <h3>3. Мята для кошек</h3>
+                    <p>Игрушки с кошачьей мятой приводят питомцев в восторг.</p>
+                    <h3>4. Лазерная указка</h3>
+                    <p>Главное — не светить в глаза и давать "поймать" добычу в конце игры.</p>
+                    <h3>5. Картонные коробки</h3>
+                    <p>Самая любимая игрушка всех кошек. Можно прятаться и нападать.</p>
+                `
+            },
+            {
+                title: "Как понять, что кошка заболела",
+                date: "08 марта 2026",
+                image: "access/image/cat-blog-4.jpg",
+                content: `
+                    <p>Кошки мастера скрывать болезнь. Но есть признаки, которые нельзя игнорировать.</p>
+                    <h3>Изменение поведения</h3>
+                    <p>Кошка стала вялой, прячется, не хочет играть — повод насторожиться.</p>
+                    <h3>Аппетит и жажда</h3>
+                    <p>Отказ от еды или, наоборот, повышенная жажда могут указывать на проблемы.</p>
+                    <h3>Шерсть и кожа</h3>
+                    <p>Тусклая шерсть, перхоть, залысины — признак нездоровья.</p>
+                    <h3>Лоток</h3>
+                    <p>Изменение цвета мочи, запор или диарея — срочно к врачу.</p>
+                    <h3>Температура</h3>
+                    <p>Норма 38-39°C. Выше или ниже — плохой знак.</p>
+                `
+            }
+        ];
+
+        // Модальные окна для статей
+        function initBlogModals() {
+            const modal = document.getElementById('article-modal');
+            const readMoreBtns = document.querySelectorAll('.btn-read-more');
+            const closeBtns = document.querySelectorAll('.close-modal, .close-article');
+            
+            readMoreBtns.forEach((btn, index) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    
+                    // Определяем статью по индексу (для демо используем индекс по модулю)
+                    const articleIndex = index % articles.length;
+                    const article = articles[articleIndex];
+                    
+                    document.getElementById('modal-title').textContent = article.title;
+                    document.getElementById('modal-date').textContent = article.date + ' · 5 мин чтения';
+                    document.getElementById('modal-body').innerHTML = article.content;
+                    
+                    if (modal) {
+                        modal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            function closeModal() {
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+            
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', closeModal);
+            });
+            
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+
+        // Секция подписки
+        function initSubscribe() {
+            const subscribeForm = document.querySelector('.subscribe-form');
+            const thanksModal = document.getElementById('subscribe-modal');
+            const closeBtns = document.querySelectorAll('.close-modal, .close-thanks');
+            
+            if (subscribeForm) {
+                subscribeForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const email = subscribeForm.querySelector('input[type="email"]').value;
+                    console.log('Подписка для:', email);
+                    
+                    // Показываем модалку спасибо
+                    if (thanksModal) {
+                        thanksModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                    
+                    subscribeForm.reset();
+                });
+            }
+            
+            function closeSubscribeModal() {
+                if (thanksModal) {
+                    thanksModal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+            
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', closeSubscribeModal);
+            });
+            
+            window.addEventListener('click', (e) => {
+                if (e.target === thanksModal) {
+                    closeSubscribeModal();
+                }
+            });
+        }
+
+        // Кнопка "Показать ещё"
+        function initLoadMore() {
+            const loadMoreBtn = document.querySelector('.btn-load-more');
+            const blogGrid = document.querySelector('.blog-grid');
+            let page = 1;
+            
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', () => {
+                    loadMoreBtn.textContent = 'Загрузка...';
+                    loadMoreBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        // Новые статьи
+                        const newArticles = [
+                            {
+                                date: "03/03/2026",
+                                title: "Почему кошки боятся воды?",
+                                excerpt: "Научное объяснение нелюбви кошек к воде и как приучить питомца к купанию."
+                            },
+                            {
+                                date: "02/03/2026",
+                                title: "Как подружить кошку с собакой",
+                                excerpt: "Пошаговое руководство по знакомству разных питомцев в одной квартире."
+                            },
+                            {
+                                date: "01/03/2026",
+                                title: "Что делать, если кошка потерялась",
+                                excerpt: "Инструкция по поиску: куда звонить, где искать, как привлечь внимание."
+                            },
+                            {
+                                date: "28/02/2026",
+                                title: "Новый год и кошки: как не навредить",
+                                excerpt: "Правила безопасности в праздники: ёлка, мишура, салюты и угощения."
+                            }
+                        ];
+                        
+                        newArticles.forEach(article => {
+                            const newCard = document.createElement('article');
+                            newCard.className = 'blog-card';
+                            newCard.innerHTML = `
+                                <div class="blog-date">${article.date}</div>
+                                <h2 class="blog-title">${article.title}</h2>
+                                <p class="blog-excerpt">${article.excerpt}</p>
+                                <button class="btn-read-more">Читать далее</button>
+                            `;
+                            blogGrid.appendChild(newCard);
+                        });
+                        
+                        loadMoreBtn.textContent = 'Показать ещё';
+                        loadMoreBtn.disabled = false;
+                        page++;
+                        
+                        // Переинициализируем обработчики
+                        initBlogModals();
+                    }, 1000);
+                });
+            }
+        }
+
+        setTimeout(() => {
+            initBlogModals();
+            initLoadMore();
+            initSubscribe();
+        }, 300);
+    </script>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Котейка — уютная гостиница для кошек и котиков в Санкт-Петербурге</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="access/css/style.css">
+</head>
+<body>
+
+    <!-- Header подгружается -->
+    <div id="header-placeholder"></div>
+
+    <div class="content-container">
+
+        <!-- 1. Главный экран -->
+        <section class="hero">
+            <div class="hero-text">
+                <p class="city">Санкт-Петербург</p>
+                <h1 class="hotel-name">Котейка</h1>
+                <p class="hotel-desc">Уютная гостиница для котов и кошек</p>
+                <button class="btn-book booking-btn">Забронировать<img src="access/image/paw.svg" alt=""></button>
+            </div>
+        </section>
+
+        <!-- 2. Почему мы? -->
+        <section class="section-why">
+            <div class="container">
+                <h2>Почему мы?</h2>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon"><img src="access/image/icon_temperature.png" alt="температура"></div>
+                        <h3>Комфортная температура</h3>
+                        <p>Во всех номерах поддерживается комфортная температура в пределах 23–25 градусов. В каждом номере можно дополнительно отрегулировать температуру.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><img src="access/image/icon_video.png" alt="видеонаблюдение"></div>
+                        <h3>Видеонаблюдение</h3>
+                        <p>Мы предоставляем доступ в нашу систему. Вы сможете следить за своим питомцем со своего смартфона или компьютера.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><img src="access/image/taxi.png" alt="зоотакси"></div>
+                        <h3>Услуги Зоотакси</h3>
+                        <p>Мы приедем за вашим питомцем в любой район Санкт-Петербурга.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><img src="access/image/icon_pitanie.png" alt="питание"></div>
+                        <h3>Сбалансированное питание</h3>
+                        <p>Вы можете привезти свой корм или доверить рацион своего питомца нашим профессионалам.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><img src="access/image/cat_progulka.png" alt="прогулки"></div>
+                        <h3>Ежедневные прогулки</h3>
+                        <p>По вашему желанию мы выгуливаем вашего питомца два раза в день на специализированной закрытой территории.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon"><img src="access/image/help_veter.png" alt="ветеринар"></div>
+                        <h3>Лучшие ветеринары</h3>
+                        <p>В гостинице 24 часа дежурит ветеринарный врач, который окажет любую помощь в случае необходимости.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Номера - СЛАЙДЕР -->
+        <section class="section-rooms">
+            <div class="container">
+                <h2>Номера</h2>
+                
+                <div class="rooms-slider" id="roomsSlider">
+                    <div class="rooms-track" id="roomsTrack">
+                        <!-- Слайд 1: Эконом -->
+                        <div class="room-slide">
+                            <div class="room-slide-image">
+                                <img src="access/image/gray-cat-bed.jpg" alt="Номер Эконом">
+                            </div>
+                            <div class="room-slide-content">
+                                <h3>Эконом</h3>
+                                <ul>
+                                    <li>Площадь - 0,63 м²</li>
+                                    <li>Размеры (ШхГхВ) - 90x70x180 см</li>
+                                    <li>Цена за сутки: 100₽</li>
+                                </ul>
+                                <button class="btn-orange booking-btn">Забронировать<img class="paw-icon-white" src="access/image/paw_white.svg" alt=""></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 2: Эконом плюс -->
+                        <div class="room-slide">
+                            <div class="room-slide-image">
+                                <img src="access/image/calico-cat-tree.jpg" alt="Номер Эконом плюс">
+                            </div>
+                            <div class="room-slide-content">
+                                <h3>Эконом плюс</h3>
+                                <ul>
+                                    <li>Площадь - 0,90 м²</li>
+                                    <li>Размеры (ШхГхВ) - 90x100x180 см</li>
+                                    <li>Цена за сутки: 200₽</li>
+                                </ul>
+                                <button class="btn-orange booking-btn">Забронировать<img class="paw-icon-white" src="access/image/paw_white.svg" alt=""></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 3: Комфорт -->
+                        <div class="room-slide">
+                            <div class="room-slide-image">
+                                <img src="access/image/gray-cat-shelf.png" alt="Номер Комфорт">
+                            </div>
+                            <div class="room-slide-content">
+                                <h3>Комфорт</h3>
+                                <ul>
+                                    <li>Площадь - 1,13 м²</li>
+                                    <li>Размеры (ШхГхВ) - 100x125x180 см</li>
+                                    <li>Цена за сутки: 250₽</li>
+                                </ul>
+                                <button class="btn-orange booking-btn">Забронировать<img class="paw-icon-white" src="access/image/paw_white.svg" alt=""></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 4: Сьют -->
+                        <div class="room-slide">
+                            <div class="room-slide-image">
+                                <img src="access/image/tabby-cat-basket.jpg" alt="Номер Сьют">
+                            </div>
+                            <div class="room-slide-content">
+                                <h3>Сьют</h3>
+                                <ul>
+                                    <li>Площадь - 1,56 м²</li>
+                                    <li>Размеры (ШхГхВ) - 125x125x180 см</li>
+                                    <li>Цена за сутки: 350₽</li>
+                                </ul>
+                                <button class="btn-orange booking-btn">Забронировать<img class="paw-icon-white" src="access/image/paw_white.svg" alt=""></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 5: Люкс -->
+                        <div class="room-slide">
+                            <div class="room-slide-image">
+                                <img src="access/image/orange-cat-bed.jpg" alt="Номер Люкс">
+                            </div>
+                            <div class="room-slide-content">
+                                <h3>Люкс</h3>
+                                <ul>
+                                    <li>Площадь - 2,56 м²</li>
+                                    <li>Размеры (ШхГхВ) - 160x160x180 см</li>
+                                    <li>Цена за сутки: 500₽</li>
+                                </ul>
+                                <button class="btn-orange booking-btn">Забронировать<img class="paw-icon-white" src="access/image/paw_white.svg" alt=""></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 6: Супер-Люкс -->
+                        <div class="room-slide">
+                            <div class="room-slide-image">
+                                <img src="access/image/white-cat-pole.jpg" alt="Номер Супер-Люкс">
+                            </div>
+                            <div class="room-slide-content">
+                                <h3>Супер-Люкс</h3>
+                                <ul>
+                                    <li>Площадь - 2,88 м²</li>
+                                    <li>Размеры (ШхГхВ) - 180x160x180 см</li>
+                                    <li>Цена за сутки: 600₽</li>
+                                </ul>
+                                <button class="btn-orange booking-btn">Забронировать<img class="paw-icon-white" src="access/image/paw_white.svg" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" id="roomsPrev">←</button>
+                        <div class="slider-dots" id="roomsDots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-arrow next" id="roomsNext">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Отзывы - СЛАЙДЕР -->
+        <section class="section-reviews">
+            <div class="container">
+                <h2>Отзывы</h2>
+                
+                <div class="reviews-slider" id="reviewsSlider">
+                    <div class="reviews-track" id="reviewsTrack">
+                        <div class="review-slide">
+                            <div class="review-card">
+                                <p class="review-text">«Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И мы и хотим остались очень довольны!»</p>
+                                <p class="review-author">Валерия Гришаева</p>
+                                <p class="review-date">15 ноября, 2019</p>
+                            </div>
+                        </div>
+                        <div class="review-slide">
+                            <div class="review-card">
+                                <p class="review-text">«Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В "Котейке" очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.»</p>
+                                <p class="review-author">Екатерина Минаева</p>
+                                <p class="review-date">10 октября, 2019</p>
+                            </div>
+                        </div>
+                        <div class="review-slide">
+                            <div class="review-card">
+                                <p class="review-text">«Мой кот — настоящая приглусная собачка. У меня были особо холодно, но я знаю, что это не проблема. Я хочу сказать, что этот кот очень любит людей. Он всегда готов помочь.»</p>
+                                <p class="review-author">Павел Нечаев</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" id="reviewsPrev">←</button>
+                        <div class="slider-dots" id="reviewsDots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="slider-arrow next" id="reviewsNext">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Как мы работаем -->
+        <section class="section-process">
+            <div class="container">
+                <h2>Как мы работаем</h2>
+                <p class="process-subtitle">Простой и понятный процесс: от бронирования до встречи питомца</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-circle">1</div>
+                        <h3>Заявка</h3>
+                        <p>Вы оставляете заявку на сайте или по телефону</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">2</div>
+                        <h3>Трансфер</h3>
+                        <p>Привозите питомца сами или вызываете наше зоотакси</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">3</div>
+                        <h3>Адаптация</h3>
+                        <p>Осмотр ветврачом, знакомство с номером и игрушками</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">4</div>
+                        <h3>Наблюдение</h3>
+                        <p>Видео 24/7, ежедневные фото и отчёты в мессенджере</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-circle">5</div>
+                        <h3>Возвращение</h3>
+                        <p>Забираете счастливого и ухоженного питомца</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Акции и спецпредложения -->
+        <section class="section-promo">
+            <div class="container">
+                <h2>Акции и спецпредложения</h2>
+
+                <div class="promo-grid">
+                    <div class="promo-card">
+                        <span class="promo-label">Для новых клиентов</span>
+                        <h3>Скидка 15%</h3>
+                        <p>При бронировании от 10 суток — скидка 15% на любой номер</p>
+                        <p class="promo-code">ПРОМОКОД: NEW15</p>
+                        <button class="btn-orange-promo booking-btn">Забронировать</button>
+                    </div>
+
+                    <div class="promo-card">
+                        <span class="promo-label">Приведи друга</span>
+                        <h3>500 ₽ в подарок</h3>
+                        <p>Приведите друга — получите скидку 500₽ на следующий заезд</p>
+                        <p class="promo-code">ПРОМОКОД: NEW15</p>
+                        <button class="btn-orange-promo participate-btn">Участвовать</button>
+                    </div>
+                </div>
+
+                <div class="promo-banner">
+                    <span class="promo-label">Действует всегда</span>
+                    <h3>Бесплатное зоотакси</h3>
+                    <p>При бронировании от 7 ночей — привезём питомца бесплатно</p>
+                    <button class="btn-dark details-btn"><span class="banner-link">Подробнее</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Как нас найти -->
+        <section class="section-map">
+            <div class="container">
+                <h2>Как нас найти</h2>
+                <div class="map-wrapper">
+                    <div class="map-box">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A...&lang=ru_RU" width="100%" height="100%" frameborder="0"></iframe>
+                    </div>
+                    <div class="info-box">
+                        <h3>Контакты</h3>
+                        <p><strong>Адрес:</strong> Санкт-Петербург, ул Большая Конюшенная, д 19</p>
+                        <p><strong>Режим работы:</strong> Ежедневно, с 9:00 до 20:00</p>
+                        <p><strong>Телефон:</strong> 8 (800) 333-55-99</p>
+                        <p><strong>E-mail:</strong> info@cat-hotel.ru</p>
+                        <div class="social">
+                            <a href="#"><img src="access/image/vk.svg" alt=""></a>
+                            <a href="#"><img src="access/image/insta.svg" alt=""></a>
+                            <a href="#"><img src="access/image/fb.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Модальное окно для бронирования -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Забронировать номер</h2>
+            
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pet-name">Имя Питомца</label>
+                    <input type="text" id="pet-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="form-group dates">
+                    <label>Дата заезда</label>
+                    <div class="date-inputs">
+                        <input type="text" id="date-from" value="26.01.2020" placeholder="с">
+                        <span>—</span>
+                        <input type="text" id="date-to" value="26.02.2020" placeholder="по">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-orange modal-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Спасибо" -->
+    <div id="thanks-modal" class="modal">
+        <div class="modal-content thanks-content">
+            <span class="close-modal">&times;</span>
+            <div class="thanks-icon">✓</div>
+            <h2>Спасибо за заявку!</h2>
+            <p>Мы свяжемся с вами в ближайшее время</p>
+            <button class="btn-orange modal-btn close-thanks">Ок</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Участвовать" -->
+    <div id="participate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Приведи друга</h2>
+            <div class="promo-detail">
+                <div class="promo-icon">🎁</div>
+                <h3>500 ₽ в подарок</h3>
+                <p>Приведите друга — получите скидку 500₽ на следующий заезд</p>
+                <p class="promo-code">ПРОМОКОД: NEW15</p>
+                <p class="promo-info">Промокод действует при бронировании от 5 суток</p>
+                <button class="btn-orange modal-btn close-participate">Понятно</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно "Подробнее" -->
+    <div id="details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Бесплатное зоотакси</h2>
+            <div class="promo-detail">
+                <div class="promo-icon">🚕</div>
+                <h3>Действует всегда</h3>
+                <p>При бронировании от 7 ночей — привезём питомца бесплатно</p>
+                <p class="promo-info">Акция распространяется на все районы Санкт-Петербурга</p>
+                <ul class="promo-list">
+                    <li>✓ Бесплатный трансфер в обе стороны</li>
+                    <li>✓ Автомобиль с климат-контролем</li>
+                    <li>✓ Опытный водитель-зооняня</li>
+                </ul>
+                <button class="btn-orange modal-btn close-details">Хорошо</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer подгружается -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Подгрузка header и footer
+        function loadHTML(id, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data)
+                .catch(err => console.error('Ошибка загрузки:', err));
+        }
+
+        loadHTML('header-placeholder', 'header.html');
+        loadHTML('footer-placeholder', 'footer.html');
+
+        // Слайдер для номеров
+        function initRoomsSlider() {
+            const track = document.getElementById('roomsTrack');
+            const prevBtn = document.getElementById('roomsPrev');
+            const nextBtn = document.getElementById('roomsNext');
+            const dots = document.querySelectorAll('#roomsDots .dot');
+            
+            if (!track || !prevBtn || !nextBtn || !dots.length) return;
+            
+            const slides = track.children;
+            const slideCount = slides.length;
+            let currentIndex = 0;
+            
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+            });
+        }
+        
+        // Слайдер для отзывов
+        function initReviewsSlider() {
+            const track = document.getElementById('reviewsTrack');
+            const prevBtn = document.getElementById('reviewsPrev');
+            const nextBtn = document.getElementById('reviewsNext');
+            const dots = document.querySelectorAll('#reviewsDots .dot');
+            
+            if (!track || !prevBtn || !nextBtn || !dots.length) return;
+            
+            const slides = track.children;
+            const slideCount = slides.length;
+            let currentIndex = 0;
+            
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            });
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+            });
+        }
+        
+        // Модальные окна
+        function initModals() {
+            const bookingModal = document.getElementById('booking-modal');
+            const thanksModal = document.getElementById('thanks-modal');
+            const participateModal = document.getElementById('participate-modal');
+            const detailsModal = document.getElementById('details-modal');
+            const bookingForm = document.getElementById('booking-form');
+            
+            // Кнопки бронирования
+            const bookingBtns = document.querySelectorAll('.booking-btn');
+            bookingBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (bookingModal) {
+                        bookingModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // Кнопка "Участвовать"
+            const participateBtns = document.querySelectorAll('.participate-btn');
+            participateBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (participateModal) {
+                        participateModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // Кнопка "Подробнее"
+            const detailsBtns = document.querySelectorAll('.details-btn');
+            detailsBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if (detailsModal) {
+                        detailsModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+            
+            // Закрытие всех модалок
+            function closeAllModals() {
+                if (bookingModal) bookingModal.style.display = 'none';
+                if (thanksModal) thanksModal.style.display = 'none';
+                if (participateModal) participateModal.style.display = 'none';
+                if (detailsModal) detailsModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Закрытие по крестику
+            document.querySelectorAll('.close-modal').forEach(closeBtn => {
+                closeBtn.addEventListener('click', closeAllModals);
+            });
+            
+            // Закрытие по кнопкам "Понятно", "Хорошо", "Ок"
+            document.querySelectorAll('.close-thanks, .close-participate, .close-details').forEach(btn => {
+                btn.addEventListener('click', closeAllModals);
+            });
+            
+            // Закрытие по клику вне модалки
+            window.addEventListener('click', (e) => {
+                if (e.target === bookingModal || e.target === thanksModal || 
+                    e.target === participateModal || e.target === detailsModal) {
+                    closeAllModals();
+                }
+            });
+            
+            // Обработка формы бронирования
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    console.log('Заявка отправлена:', {
+                        name: document.getElementById('name')?.value,
+                        petName: document.getElementById('pet-name')?.value,
+                        phone: document.getElementById('phone')?.value,
+                        email: document.getElementById('email')?.value
+                    });
+                    
+                    if (bookingModal) bookingModal.style.display = 'none';
+                    
+                    setTimeout(() => {
+                        if (thanksModal) thanksModal.style.display = 'block';
+                    }, 300);
+                    
+                    bookingForm.reset();
+                });
+            }
+        }
+        
+        // Инициализация после загрузки
+        setTimeout(() => {
+            initRoomsSlider();
+            initReviewsSlider();
+            initModals();
+        }, 100);
+    </script>
+</body>
+</html>
