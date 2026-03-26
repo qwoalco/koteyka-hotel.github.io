@@ -1,0 +1,466 @@
+/* cataloge.css - стили для страницы каталога */
+:root {
+    --accent: #FF9800;
+    --accent-dark: #e68900;
+    --dark: #1A212F;
+    --gray-light: #f8f9fa;
+    --gray-medium: #e2e8f0;
+    --white: #ffffff;
+    --yellow: #FAC663;
+    --grey-light: #ECECEC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.5;
+}
+
+/* Контейнер каталога */
+.catalog-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 20px 100px;
+}
+
+/* Заголовок страницы */
+.page-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--dark);
+}
+
+/* Основной макет с фильтром и карточками */
+.catalog-layout {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+/* Боковая панель фильтра */
+.filter-sidebar {
+    width: 270px;
+    flex-shrink: 0;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 25px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    align-self: flex-start;
+    position: sticky;
+    top: 100px;
+}
+
+.filter-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--dark);
+}
+
+.filter-section {
+    margin-bottom: 35px;
+}
+
+.filter-section h4 {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.price-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-inputs input {
+    width: 80px;
+    padding: 8px 12px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 8px;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.filter-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.filter-checkbox span {
+    font-size: 16px;
+    color: var(--dark);
+}
+
+.reset-filter-btn {
+    width: 100%;
+    height: 45px;
+    background: var(--white);
+    color: var(--dark);
+    border: 2px solid var(--accent);
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.reset-filter-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Сетка карточек номеров */
+.rooms-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Карточка номера */
+.room-card-catalog {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card-catalog:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.room-card-image {
+    height: 185px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.room-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.room-card-content {
+    padding: 20px 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card-content h3 {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.room-card-specs {
+    list-style: none;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.room-card-specs li {
+    font-size: 14px;
+    color: #4a5568;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.room-card-specs li:before {
+    content: "●";
+    color: var(--accent);
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+.room-amenities {
+    font-size: 13px;
+    color: #666;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+.room-price {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark);
+    margin: 12px 0;
+}
+
+/* Кнопка */
+.btn-orange {
+    width: 100%;
+    height: 46px;
+    border-radius: 23px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto;
+}
+
+.btn-orange:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,152,0,0.3);
+}
+
+.btn-orange img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Секция дополнительных услуг */
+.services-section {
+    margin: 120px 0;
+}
+
+.services-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--dark);
+}
+
+.services-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    padding: 25px 20px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--grey-light);
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.service-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.service-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-content h3 {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.service-description {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.service-price {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--accent);
+    margin: 10px 0 15px;
+}
+
+/* Секция карты */
+.section-map {
+    padding: 100px 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.map-wrapper {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.map-box {
+    flex: 2;
+    min-width: 600px;
+    height: 560px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.info-box {
+    flex: 1;
+    min-width: 400px;
+    background: var(--yellow);
+    color: white;
+    border-radius: 20px;
+    padding: 60px 48px;
+}
+
+.info-box h3 {
+    font-family: "Rubik", sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.info-box p {
+    font-size: 17px;
+    margin: 20px 0;
+}
+
+.social {
+    margin-top: 48px;
+    display: flex;
+    gap: 24px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Адаптив */
+@media (max-width: 1200px) {
+    .rooms-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .catalog-layout {
+        flex-direction: column;
+    }
+    .filter-sidebar {
+        width: 100%;
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .rooms-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .room-card-catalog {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .map-wrapper {
+        flex-direction: column;
+    }
+    
+    .map-box {
+        min-width: 100%;
+        height: 350px;
+    }
+    
+    .info-box {
+        min-width: 100%;
+        padding: 40px 30px;
+    }
+    
+    .info-box h3 {
+        font-size: 28px;
+    }
+}

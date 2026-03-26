@@ -1,0 +1,135 @@
+/* visual-effects.css - оптимизированные визуальные эффекты */
+
+/* ========== 1. АНИМИРОВАННЫЙ ГРАДИЕНТНЫЙ ФОН (оптимизированный) ========== */
+.gradient-bg {
+    background: linear-gradient(135deg, #FF9800, #FF5722);
+    position: relative;
+    will-change: auto;
+}
+
+/* Упрощенная анимация градиента (без постоянного движения) */
+.gradient-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,152,0,0.3), rgba(255,87,34,0.3));
+    animation: subtleShift 8s ease infinite;
+    pointer-events: none;
+}
+
+@keyframes subtleShift {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* ========== 2. УПРОЩЕННЫЙ ПАРАЛЛАКС (без fixed на мобилке) ========== */
+.parallax {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+}
+
+/* Параллакс только на десктопе */
+@media (min-width: 992px) {
+    .parallax {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 991px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+/* ========== 3. СТЕКЛЯННЫЙ ЭФФЕКТ (облегченный) ========== */
+/* Легкая версия стекла - без blur на слабых устройствах */
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 152, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Полноценный стеклянный эффект ТОЛЬКО на мощных устройствах */
+@media (min-width: 1200px) and (min-resolution: 2dppx) {
+    .glass-card-full {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Для модальных окон - легкая версия */
+.modal .modal-content {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: none;
+}
+
+/* ========== 4. АНИМИРОВАННЫЕ ЧАСТИЦЫ (ОПТИМИЗИРОВАННЫЕ) ========== */
+#particles-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Отключаем частицы на мобильных устройствах */
+@media (max-width: 768px) {
+    #particles-canvas {
+        display: none;
+    }
+}
+
+/* Упрощенная анимация для кнопок */
+.btn-glass {
+    background: rgba(255, 152, 0, 0.9);
+    border: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-glass:hover {
+    background: #e68900;
+    transform: translateY(-2px);
+}
+
+/* ========== 5. ОПТИМИЗАЦИЯ АНИМАЦИЙ ========== */
+/* Используем transform вместо left/top для производительности */
+.slide-up, .slide-left, .scale-in {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Отключаем анимации на мобильных устройствах */
+@media (max-width: 768px) {
+    .slide-up, .slide-left, .scale-in {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
